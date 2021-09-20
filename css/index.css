@@ -100,6 +100,7 @@ body .content .first-page {
 body .content .first-page .right-block {
   max-width: 568px;
   margin-right: 112px;
+  flex: 1 1 50%;
 }
 @media (max-width: 768px) {
   body .content .first-page .right-block {
@@ -160,11 +161,13 @@ body .content .first-page .right-block .button {
 body .content .first-page .left-block {
   max-width: 500px;
   width: 100%;
-  max-height: 484px;
+  max-height: 615px;
+  flex: 1 1 50%;
 }
-body .content .first-page .left-block img {
-  width: 100%;
+body .content .first-page .left-block .photo {
   height: 100%;
+  width: 100%;
+  background: center/cover no-repeat url("../assets/img/burner.jpg");
 }
 body .content .header-products {
   font-size: 36px;
@@ -343,20 +346,6 @@ body .content .item-page .left-content .swiper .swiper-slide {
 }
 body .content .item-page .left-content img {
   width: 100%;
-}
-body .content .item-page .left-content .arrows {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-body .content .item-page .left-content .arrows img {
-  width: 40px;
-  height: 40px;
-}
-body .content .item-page .left-content .arrows img:not(:last-child) {
-  margin-right: 80px;
 }
 body .content .item-page .right-content .overhead-block {
   background-color: #F2F6FA;

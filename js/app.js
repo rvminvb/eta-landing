@@ -44,7 +44,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     xhr.onreadystatechange = function() {
       if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 201) {
-        console.log('good');
+        // console.log('good');
+        alert('good');
       }
     }
 

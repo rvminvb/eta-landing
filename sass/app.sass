@@ -77,6 +77,7 @@ body
       .right-block
         max-width: 568px
         margin-right: 112px
+        flex: 1 1 50%
         @include media("<=tablet")
           margin-right: 0
           display: flex
@@ -125,10 +126,12 @@ body
       .left-block
         max-width: 500px
         width: 100%
-        max-height: 484px
-        img
-          width: 100%
+        max-height: 615px
+        flex: 1 1 50%
+        .photo
           height: 100%
+          width: 100%
+          background: center / cover no-repeat url('../assets/img/burner.jpg')
   .content
     .header-products
       font-size: 36px
@@ -268,17 +271,6 @@ body
             background: center / cover no-repeat url('../assets/img/burner.jpg')
         img
           width: 100%
-        .arrows
-          margin-top: 25px
-          margin-bottom: 25px
-          display: flex
-          flex-direction: row
-          justify-content: center
-          img
-            width: 40px
-            height: 40px
-            &:not(:last-child)
-              margin-right: 80px
       .right-content
         .overhead-block
           background-color: #F2F6FA
