@@ -1,0 +1,376 @@
+@import '../node_modules/include-media/dist/_include-media.scss'
+  
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+  margin: 0
+
+input,
+button
+  font: inherit
+
+html
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+  overflow-x: hidden
+  height: -webkit-fill-available
+  
+body
+  background-color: #fcfcfc
+  font-family: 'Montserrat', sans-serif
+  margin: 0
+  min-height: 100vh
+  min-height: -webkit-fill-available
+  display: flex
+  flex-direction: column
+  .content
+    padding-right: 15vw
+    padding-left: 15vw
+    align-self: center
+    width: 100%
+    .header
+      display: flex
+      padding-top: 27px
+      padding-bottom: 27px
+      justify-content: space-between
+      .logo
+        display: flex
+        margin-right: 10vw
+        background: center / contain no-repeat url('/assets/img/logo.png')
+        max-width: 200px
+        height: 80px
+        width: 100%
+        @include media("<=tablet")
+          margin-right: 0
+      .contacts
+        display: flex
+        align-items: center
+        @include media("<=tablet")
+          display: none
+        .email
+          margin-right: 3.6vw
+          img
+            margin-right: 12px
+        .location
+          margin-right: 3.6vw
+          img
+            margin-right: 12px
+        .phone
+          img
+            margin-right: 12px
+  .line 
+    border-bottom: 1px solid #7E868E
+    @include media("<=tablet")
+      display: none
+  .content
+    .first-page
+      margin-top: 90px
+      display: flex
+      justify-content: space-between
+      @include media("<=tablet")
+        flex-direction: column
+        margin-top: 0
+      .right-block
+        max-width: 568px
+        margin-right: 112px
+        @include media("<=tablet")
+          margin-right: 0
+          display: flex
+          flex-direction: column
+        .overhead-block
+          background-color: #F2F6FA
+          width: 40%
+          height: 40px
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-bottom: 25px
+          .overhead
+            font-weight: 400
+            font-size: 16px
+            text-align: center
+        .heading
+          font-size: 48px
+          font-weight: 700
+          line-height: 60px
+          font-style: bold
+          margin-bottom: 24px
+        .subtitle
+          font-size: 21px
+          font-weight: 400
+          line-height: 30px
+        .button
+          margin-top: 40px
+          max-width: 307px
+          width: 100%
+          height: 88px
+          background-color: #101084
+          border-radius: 8px
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-bottom: 70px
+          color: #FFFFFF
+          font-weight: 500
+          font-size: 18px
+          cursor: pointer
+          align-self: center
+          border: none
+          @include media("<=tablet")
+            align-self: auto
+      .left-block
+        max-width: 500px
+        width: 100%
+        max-height: 484px
+        img
+          width: 100%
+          height: 100%
+  .content
+    .header-products
+      font-size: 36px
+      font-weight: 700
+      text-align: center
+      margin-top: 70px
+      margin-bottom: 60px
+    .products
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      @include media("<=tablet")
+        flex-direction: column
+      .product-item
+        border-radius: 10px
+        border: 1px solid #F2F6FA
+        margin-bottom: 65px
+        .product-item__header
+          max-width: 503px
+          width: 100%
+          img
+            width: 100%
+        .product-item__body
+          padding-left: 40px
+          .product-heading
+            margin-top: 45px
+            margin-bottom: 12px
+            font-weight: 700
+            font-size: 24px
+          .product-details
+            font-weight: 400px
+            font-size: 16px
+            margin-bottom: 30px
+          .product-price
+            font-weight: 500px
+            font-size: 24px
+            margin-bottom: 14px
+          .button-products
+            text-decoration: none
+            width: 189px
+            height: 68px
+            background-color: #101084
+            border-radius: 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 25px
+            font-weight: 500
+            font-size: 18px
+            color: #FFFFFF
+  .content
+    .form
+      margin-top: 70px
+      margin-bottom: 70px
+      border: 8px solid #101084
+      border-radius: 10px
+      padding: 20px
+      @include media("<=tablet")
+        margin-top: 0
+      .form-heading
+        margin-top: 60px
+        font-weight: 700
+        font-size: 36px
+        margin-bottom: 12px
+        text-align: center
+      .form-subtitle
+        font-weight: 400
+        font-size: 21px
+        margin-bottom: 36px
+        text-align: center
+      .form-body
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        margin-bottom: 70px
+        @include media("<=tablet")
+          flex-direction: column
+          align-items: center
+          margin-bottom: 0
+        .custom-input
+          position: relative
+          width: 100%
+          max-width: 400px
+          margin-right: 20px
+          @include media("<=tablet")
+            margin-bottom: 15px
+          &:before 
+            content: ''
+            position: absolute
+            top: 30px
+            left: 15px
+            margin: auto 0
+            width: 25px
+            height: 25px
+            background: url('/assets/img/phone-call.svg') no-repeat
+            background-size: cover
+          input
+            width: 100%
+            height: 85px
+            padding-left: 50px
+            border: 0
+            background-color: #F2F6FA
+            border-radius: 8px
+        .form-button
+          border-radius: 8px
+          background-color: #101084
+          display: flex
+          align-items: center
+          justify-content: center
+          max-width: 280px
+          width: 100%
+          height: 86px
+          .button-text
+            color: #FFFFFF
+            font-weight: 500
+            font-size: 18px
+            text-align: center
+  .content
+    .item-page
+      display: flex
+      margin-top: 90px
+      @include media("<=tablet")
+        flex-direction: column-reverse
+        margin-top: 0
+      .left-content
+        margin-right: 100px
+        max-width: 500px
+        width: 100%
+        max-height: 615px
+        @include media("<=tablet")
+          margin-right: 0
+          margin-top: 40px
+        .swiper
+          width: 100%
+          height: 100%
+          .swiper-slide
+            background: center / cover no-repeat url('/assets/img/burner.jpg')
+        img
+          width: 100%
+        .arrows
+          margin-top: 25px
+          margin-bottom: 25px
+          display: flex
+          flex-direction: row
+          justify-content: center
+          img
+            width: 40px
+            height: 40px
+            &:not(:last-child)
+              margin-right: 80px
+      .right-content
+        .overhead-block
+          background-color: #F2F6FA
+          width: 70%
+          height: 40px
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-bottom: 25px
+          .overhead
+            font-weight: 400
+            font-size: 16px
+            text-align: center
+        .heading
+          font-size: 48px
+          font-weight: 700
+          line-height: 60px
+          font-style: bold
+          margin-bottom: 24px
+          @include media("<=tablet")
+            word-break: break-word
+        .subtitle
+          font-size: 21px
+          font-weight: 400
+          line-height: 30px
+          margin-bottom: 30px
+        .list
+          color: #101084 
+          font-weight: 700
+          font-size: 30px
+          display: flex
+          margin-bottom: 40px
+          .numbers
+            width: 50%
+            p
+              font-weight: 400
+              font-size: 14px
+              line-height: 20px
+              color: #2E363E
+              margin-top: 5px
+              padding-right: 50px
+  .content
+    .item-header
+      font-weight: 700
+      font-size: 36px
+      color: #2E363E
+      text-align: center
+      margin-bottom: 60px
+    .items
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      margin-bottom: 60px
+      .item-card
+        border: 1px solid #E2EAF2
+        border-radius: 8px
+        width: 30%
+        height: 150px
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: center
+        cursor: pointer
+        p
+          margin-top: 24px
+        &.active
+          border: 3px solid #101084
+    .item-description
+      line-height: 24px
+      padding: 25px
+      margin-bottom: 45px
+      display: none
+      &.active
+        display: block
+    .video
+      height: 650px
+      @include media("<=tablet")
+        height: 250px
+        margin-bottom: 25px
+      iframe
+        width: 100%
+        height: 100%
+            
+      
+    
+            
+
+
+
+
+
+
+
+        
+
