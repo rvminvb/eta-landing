@@ -44,7 +44,7 @@ body .content .header {
 body .content .header .logo {
   display: flex;
   margin-right: 10vw;
-  background: center/contain no-repeat url("/assets/img/logo.png");
+  background: center/contain no-repeat url("../assets/img/logo.png");
   max-width: 200px;
   height: 80px;
   width: 100%;
@@ -285,7 +285,7 @@ body .content .form .form-body .custom-input:before {
   margin: auto 0;
   width: 25px;
   height: 25px;
-  background: url("/assets/img/phone-call.svg") no-repeat;
+  background: url("../assets/img/phone-call.svg") no-repeat;
   background-size: cover;
 }
 body .content .form .form-body .custom-input input {
@@ -339,7 +339,7 @@ body .content .item-page .left-content .swiper {
   height: 100%;
 }
 body .content .item-page .left-content .swiper .swiper-slide {
-  background: center/cover no-repeat url("/assets/img/burner.jpg");
+  background: center/cover no-repeat url("../assets/img/burner.jpg");
 }
 body .content .item-page .left-content img {
   width: 100%;
