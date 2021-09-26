@@ -1,4 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('.btn-menu');
+  menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('open');
+    document.querySelector('.mobile-menu').classList.toggle('open');
+  });
+
+  const toFormBtn = document.querySelector('#toFormBtn');
+  if (toFormBtn) {
+    toFormBtn.addEventListener('click', () => {
+      document.querySelector('#feedbackForm').scrollIntoView({ behavior: 'smooth'});
+    });
+  }
+
   const swiper = new Swiper('.item-swiper', {
     loop: true,
     pagination: {
@@ -6,13 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  let selectedTab = 2;
   const tabs = document.querySelectorAll('.items.tabs .item-card');
   const tabsContent = document.querySelectorAll('.item-description');
 
   tabs.forEach((item, index) => {
     item.addEventListener('click', () => {
-      selectedTab = index + 1;
       tabs.forEach((tab) => {
         if (tab === item) {
           tab.classList.add('active');
@@ -20,15 +31,41 @@ window.addEventListener('DOMContentLoaded', () => {
           tab.classList.remove('active');
         }
       })
-      tabsContent.forEach((item, tabIndex) => {
-        if (index === tabIndex) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      })
+      toggleTab(index);
     })
   })
+
+  document.querySelector('.select-wrapper').addEventListener('click', function() {
+    this.querySelector('.select').classList.toggle('open');
+  })
+
+  document.querySelectorAll(".custom-option").forEach((option, index) => {
+    option.addEventListener('click', function() {
+      if (!this.classList.contains('selected')) {
+        this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+        this.classList.add('selected');
+        this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
+        toggleTab(index);
+      }
+    })
+  });
+
+  window.addEventListener('click', function(e) {
+    const select = document.querySelector('.select')
+    if (!select.contains(e.target)) {
+      select.classList.remove('open');
+    }
+  });
+
+  function toggleTab(index) {
+    tabsContent.forEach((item, tabIndex) => {
+      if (index === tabIndex) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    })
+  }
 
   document.querySelector('button.form-button').addEventListener('click', () => {
     let form = {

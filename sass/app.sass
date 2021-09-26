@@ -32,6 +32,9 @@ body
     padding-left: 15vw
     align-self: center
     width: 100%
+    @include media("<=tablet")
+      padding-right: 7vw
+      padding-left: 7vw
     .header
       display: flex
       padding-top: 27px
@@ -44,6 +47,7 @@ body
         max-width: 200px
         height: 80px
         width: 100%
+        z-index: 101
         @include media("<=tablet")
           margin-right: 0
       .contacts
@@ -62,6 +66,34 @@ body
         .phone
           img
             margin-right: 12px
+      .btn-menu
+        display: none
+        z-index: 101
+        img.close
+          display: none
+        &.open
+          img.close
+            display: block
+          img.open
+            display: none
+        @include media("<=tablet")
+          display: flex
+      .mobile-menu
+        display: none
+        flex-direction: column
+        position: absolute
+        top: 0
+        left: 0
+        align-items: center
+        font-size: 20px
+        line-height: 44px
+        background-color: #e8e8ea
+        width: 100vw
+        height: 100vh
+        z-index: 100
+        padding-top: 150px
+        &.open
+          display: flex
   .line 
     border-bottom: 1px solid #7E868E
     @include media("<=tablet")
@@ -85,7 +117,7 @@ body
         .overhead-block
           background-color: #F2F6FA
           width: 40%
-          height: 40px
+          min-height: 40px
           display: flex
           align-items: center
           justify-content: center
@@ -98,7 +130,6 @@ body
           font-size: 48px
           font-weight: 700
           line-height: 60px
-          font-style: bold
           margin-bottom: 24px
         .subtitle
           font-size: 21px
@@ -122,7 +153,7 @@ body
           align-self: center
           border: none
           @include media("<=tablet")
-            align-self: auto
+            align-self: center
       .left-block
         max-width: 500px
         width: 100%
@@ -131,7 +162,31 @@ body
         .photo
           height: 100%
           width: 100%
-          background: center / cover no-repeat url('../assets/img/burner.jpg')
+          background: center / contain no-repeat url('../assets/img/item-2/2.png')
+    .characteristic
+      color: #101084 
+      font-weight: 700
+      font-size: 30px
+      display: flex
+      margin-bottom: 40px
+      margin-top: 40px
+      @include media("<=tablet")
+        flex-direction: column
+        margin: 0
+      .numbers
+        width: 50%
+        @include media("<=tablet")
+          width: 100%
+          margin-bottom: 40px
+        p
+          font-weight: 400
+          font-size: 18px
+          line-height: 20px
+          color: #2E363E
+          margin-top: 5px
+          padding-right: 50px
+          @include media("<=tablet")
+            padding-right: 0
   .content
     .header-products
       font-size: 36px
@@ -139,6 +194,9 @@ body
       text-align: center
       margin-top: 70px
       margin-bottom: 60px
+      @include media("<=tablet")
+        margin-top: 0
+        margin-bottom: 40px
     .products
       display: flex
       flex-direction: row
@@ -146,23 +204,39 @@ body
       @include media("<=tablet")
         flex-direction: column
       .product-item
+        display: flex
+        flex-direction: column
         border-radius: 10px
         border: 1px solid #F2F6FA
         margin-bottom: 65px
-        .product-item__header
+        max-width: 500px
+        flex: 1 1 50%
+        &:not(:last-child)
+          margin-right: 50px
+          @include media("<=tablet")
+            margin-right: 0
+        @include media("<=tablet")
+          margin-bottom: 30px 
+        &__header
           max-width: 503px
+          height: 500px
           width: 100%
-          img
-            width: 100%
-        .product-item__body
+        &__body
+          display: flex
+          flex-direction: column
           padding-left: 40px
+          padding-right: 40px
+          @include media("<=tablet")
+            padding-left: 15px
+            padding-right: 15px
           .product-heading
             margin-top: 45px
             margin-bottom: 12px
             font-weight: 700
             font-size: 24px
           .product-details
-            font-weight: 400px
+            margin-top: auto
+            font-weight: 400
             font-size: 16px
             margin-bottom: 30px
           .product-price
@@ -182,6 +256,8 @@ body
             font-weight: 500
             font-size: 18px
             color: #FFFFFF
+            @include media("<=tablet")
+              align-self: center
   .content
     .form
       margin-top: 70px
@@ -197,6 +273,8 @@ body
         font-size: 36px
         margin-bottom: 12px
         text-align: center
+        @include media("<=tablet")
+          line-break: anywhere
       .form-subtitle
         font-weight: 400
         font-size: 21px
@@ -218,6 +296,7 @@ body
           margin-right: 20px
           @include media("<=tablet")
             margin-bottom: 15px
+            margin-right: 0
           &:before 
             content: ''
             position: absolute
@@ -226,8 +305,11 @@ body
             margin: auto 0
             width: 25px
             height: 25px
-            background: url('../assets/img/phone-call.svg') no-repeat
+            background: url('../assets/img/phone.svg') no-repeat
             background-size: cover
+          &.email::before
+            background: center / cover no-repeat url('../assets/img/email.svg')
+            height: 20px
           input
             width: 100%
             height: 85px
@@ -244,6 +326,7 @@ body
           max-width: 280px
           width: 100%
           height: 86px
+          border: none
           .button-text
             color: #FFFFFF
             font-weight: 500
@@ -258,24 +341,23 @@ body
         margin-top: 0
       .left-content
         margin-right: 100px
-        max-width: 500px
-        width: 100%
+        width: 50%
         max-height: 615px
         @include media("<=tablet")
           margin-right: 0
           margin-top: 40px
-        .swiper
+          height: 600px
           width: 100%
-          height: 100%
-          .swiper-slide
-            background: center / cover no-repeat url('../assets/img/burner.jpg')
         img
           width: 100%
       .right-content
+        width: calc(50% - 5vw)
+        @include media("<=tablet")
+          width: 100%
         .overhead-block
           background-color: #F2F6FA
           width: 70%
-          height: 40px
+          min-height: 40px
           display: flex
           align-items: center
           justify-content: center
@@ -288,7 +370,6 @@ body
           font-size: 48px
           font-weight: 700
           line-height: 60px
-          font-style: bold
           margin-bottom: 24px
           @include media("<=tablet")
             word-break: break-word
@@ -324,6 +405,8 @@ body
       flex-direction: row
       justify-content: space-around
       margin-bottom: 60px
+      @include media("<=tablet")
+        display: none
       .item-card
         border: 1px solid #E2EAF2
         border-radius: 8px
@@ -336,15 +419,44 @@ body
         cursor: pointer
         p
           margin-top: 24px
+          text-align: center
         &.active
           border: 3px solid #101084
+    .select-wrapper
+      display: none
+      @include media("<=tablet")
+        display: block
+        margin-bottom: 25px
     .item-description
-      line-height: 24px
+      line-height: 30px
       padding: 25px
       margin-bottom: 45px
       display: none
+      justify-content: center
+      text-align: justify
+      @include media("<=tablet")
+        padding: 0
+      &.images
+        padding: 0
+        flex-wrap: wrap
+        @include media("<=tablet")
+          flex-direction: column
+        img
+          border: 1px solid #E2EAF2
+          max-height: 350px
+          @include media("<=tablet")
+            width: 100%
+            max-height: none
       &.active
-        display: block
+        display: flex
+      table
+        table-layout: fixed
+        border-collapse: collapse
+        td
+          border: 1px solid #E2EAF2
+          padding: 8px 16px
+          &:last-child
+            font-weight: 500
     .video
       height: 650px
       @include media("<=tablet")
@@ -354,15 +466,130 @@ body
         width: 100%
         height: 100%
             
-      
-    
-            
+.swiper
+  width: 100%
+  height: 100%
+  .slide-1
+    background: center / contain no-repeat url('../assets/img/item-1/1.png')
+  .slide-2
+    background: center / contain no-repeat url('../assets/img/item-1/2.png')
+  .slide-3
+    background: center / contain no-repeat url('../assets/img/item-1/3.png')
+
+  .slide-21
+    background: center / contain no-repeat url('../assets/img/item-2/1.png')
+  .slide-22
+    background: center / contain no-repeat url('../assets/img/item-2/2.png')
+  .slide-23
+    background: center / contain no-repeat url('../assets/img/item-2/3.png')
+  .slide-24
+    background: center / contain no-repeat url('../assets/img/item-2/4.png')
+  .slide-25
+    background: center / contain no-repeat url('../assets/img/item-2/5.png')
+  .slide-26
+    background: center / contain no-repeat url('../assets/img/item-2/6.png')
+  .slide-27
+    background: center / contain no-repeat url('../assets/img/item-2/7.png')
+  .slide-28
+    background: center / contain no-repeat url('../assets/img/item-2/8.png')
+
+.select-wrapper 
+  position: relative
+  user-select: none
+  width: 100%
+
+  .select
+    position: relative
+    display: flex
+    flex-direction: column
+    border-width: 0 2px 0 2px
+    border-style: solid
+    border-color: #394a6d
+
+  .select__trigger 
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 22px
+    font-size: 20px
+    font-weight: 300
+    color: #3b3b3b
+    height: 60px
+    line-height: 60px
+    background: #ffffff
+    cursor: pointer
+    border-width: 2px 0 2px 0
+    border-style: solid
+    border-color: #394a6d
+
+  .arrow
+    position: relative
+    height: 15px
+    width: 15px
+
+  .arrow::before, .arrow::after 
+    content: ""
+    position: absolute
+    bottom: 0px
+    width: 0.15rem
+    height: 100%
+    transition: all 0.5s
+
+  .arrow::before 
+    left: -5px
+    transform: rotate(-45deg)
+    background-color: #394a6d
+
+  .arrow::after 
+    left: 5px
+    transform: rotate(45deg)
+    background-color: #394a6d
+
+  .open .arrow::before 
+    left: -5px
+    transform: rotate(45deg)
+
+  .open .arrow::after 
+    left: 5px
+    transform: rotate(-45deg)
 
 
+  .custom-options 
+    position: absolute
+    display: block
+    top: 100%
+    left: 0
+    right: 0
+    border: 2px solid #394a6d
+    border-top: 0
+    background: #fff
+    transition: all 0.5s
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    z-index: 2
 
+  .select.open .custom-options 
+    opacity: 1
+    visibility: visible
+    pointer-events: all
 
+  .custom-option 
+    position: relative
+    display: block
+    padding: 0 22px 0 22px
+    font-size: 22px
+    font-weight: 300
+    color: #3b3b3b
+    line-height: 60px
+    cursor: pointer
+    transition: all 0.5s
 
+  .custom-option:hover 
+    cursor: pointer
+    background-color: #b2b2b2
 
-
-        
-
+  .custom-option.selected 
+    color: #ffffff
+    background-color: #305c91
