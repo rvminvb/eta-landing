@@ -44,11 +44,22 @@ body .content {
 body .content.head {
   box-shadow: 0 4px 56px rgba(0, 0, 0, 0.12);
 }
+@media (max-width: 768px) {
+  body .content.head {
+    box-shadow: -1px -20px 56px 0px rgba(0, 0, 0, 0.12);
+  }
+}
 body .content .header {
   display: flex;
   padding-top: 27px;
   padding-bottom: 27px;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  body .content .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 body .content .header .logo {
   display: flex;
@@ -62,6 +73,7 @@ body .content .header .logo {
 @media (max-width: 768px) {
   body .content .header .logo {
     margin-right: 0;
+    height: 60px;
   }
 }
 body .content .header .contacts {
@@ -144,6 +156,7 @@ body .content .first-page {
   body .content .first-page {
     flex-direction: column;
     margin-top: 0;
+    margin-bottom: 40px;
   }
 }
 body .content .first-page .right-block {
@@ -178,10 +191,21 @@ body .content .first-page .right-block .heading {
   line-height: 60px;
   margin-bottom: 24px;
 }
+@media (max-width: 768px) {
+  body .content .first-page .right-block .heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
 body .content .first-page .right-block .subtitle {
   font-size: 21px;
   font-weight: 400;
   line-height: 30px;
+}
+@media (max-width: 768px) {
+  body .content .first-page .right-block .subtitle {
+    font-size: 19px;
+  }
 }
 body .content .first-page .right-block .button {
   margin-top: 40px;
@@ -222,6 +246,12 @@ body .content .block {
   margin-bottom: 30px;
   margin-right: 5wv;
 }
+@media (max-width: 768px) {
+  body .content .block {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+}
 body .content .block .characteristic {
   display: flex;
   flex-direction: column;
@@ -236,6 +266,12 @@ body .content .block .characteristic .page-number {
   left: 6px;
   top: -60px;
 }
+@media (max-width: 768px) {
+  body .content .block .characteristic .page-number {
+    font-size: 80px;
+    top: -33px;
+  }
+}
 body .content .block .characteristic .characteristic-head {
   max-width: 400px;
   font-size: 30px;
@@ -243,11 +279,23 @@ body .content .block .characteristic .characteristic-head {
   font-weight: 500;
   padding-left: 30px;
 }
+@media (max-width: 768px) {
+  body .content .block .characteristic .characteristic-head {
+    font-size: 25px;
+  }
+}
 body .content .block .characteristic .desc {
   margin-top: 24px;
   font-size: 18px;
   z-index: 1;
   padding-left: 30px;
+}
+@media (max-width: 768px) {
+  body .content .block .characteristic .desc {
+    margin-bottom: 25px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
 }
 body .content .header-products {
   font-size: 36px;
@@ -259,7 +307,7 @@ body .content .header-products {
 @media (max-width: 768px) {
   body .content .header-products {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 body .content .products {
@@ -351,7 +399,6 @@ body .content .form {
   margin-top: 70px;
   margin-bottom: 70px;
   border: 8px solid #101084;
-  border-radius: 10px;
   padding: 20px;
   box-shadow: 3px 20px 20px 3px rgba(0, 0, 0, 0.12);
 }
