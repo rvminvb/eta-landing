@@ -212,7 +212,7 @@ body .content .first-page .right-block .button {
   max-width: 307px;
   width: 100%;
   height: 88px;
-  background-color: #101084;
+  background-color: #384661;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -259,7 +259,8 @@ body .content .block .characteristic {
   max-width: 650px;
 }
 body .content .block .characteristic .page-number {
-  color: #e9eced;
+  color: #b69a82;
+  opacity: 0.4;
   font-weight: 500;
   font-size: 120px;
   position: absolute;
@@ -297,12 +298,17 @@ body .content .block .characteristic .desc {
     margin-top: 20px;
   }
 }
+body .content.items {
+  background-color: #e0d5cb;
+  margin-top: 30px;
+}
 body .content .header-products {
   font-size: 36px;
   font-weight: 700;
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #fcfcfc;
 }
 @media (max-width: 768px) {
   body .content .header-products {
@@ -324,7 +330,6 @@ body .content .products .product-item {
   box-shadow: 0 4px 56px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
-  border: 1px solid #F2F6FA;
   margin-bottom: 65px;
   max-width: 500px;
   flex: 1 1 50%;
@@ -346,12 +351,15 @@ body .content .products .product-item__header {
   max-width: 503px;
   height: 450px;
   width: 100%;
+  background-color: white;
 }
 body .content .products .product-item__body {
   display: flex;
   flex-direction: column;
   padding-left: 40px;
   padding-right: 40px;
+  color: white;
+  background-color: #384661;
 }
 @media (max-width: 768px) {
   body .content .products .product-item__body {
@@ -380,7 +388,7 @@ body .content .products .product-item__body .button-products {
   text-decoration: none;
   width: 189px;
   height: 68px;
-  background-color: #101084;
+  background-color: #fcfcfc;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -388,7 +396,7 @@ body .content .products .product-item__body .button-products {
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #222222;
 }
 @media (max-width: 768px) {
   body .content .products .product-item__body .button-products {
@@ -474,7 +482,7 @@ body .content .form .form-body .custom-input input {
 }
 body .content .form .form-body .form-button {
   border-radius: 8px;
-  background-color: #101084;
+  background-color: #384661;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -555,7 +563,7 @@ body .content .item-page .right-content .subtitle {
   margin-bottom: 30px;
 }
 body .content .item-page .right-content .list {
-  color: #101084;
+  color: #e0d5cb;
   font-weight: 700;
   font-size: 30px;
   display: flex;
@@ -568,14 +576,14 @@ body .content .item-page .right-content .list .numbers p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #2E363E;
+  color: #384661;
   margin-top: 5px;
   padding-right: 50px;
 }
 body .content .item-header {
   font-weight: 700;
   font-size: 36px;
-  color: #2E363E;
+  color: #384661;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -591,9 +599,8 @@ body .content .items {
   }
 }
 body .content .items .item-card {
-  border: 1px solid #E2EAF2;
-  border-radius: 8px;
   width: 30%;
+  box-shadow: 0px 20px 56px 3px rgba(0, 0, 0, 0.12);
   height: 150px;
   display: flex;
   align-items: center;
@@ -606,7 +613,7 @@ body .content .items .item-card p {
   text-align: center;
 }
 body .content .items .item-card.active {
-  border: 3px solid #101084;
+  border: 3px solid #384661;
 }
 body .content .select-wrapper {
   display: none;
@@ -655,6 +662,7 @@ body .content .item-description.active {
 body .content .item-description table {
   table-layout: fixed;
   border-collapse: collapse;
+  box-shadow: 0px 20px 56px 3px rgba(0, 0, 0, 0.12);
 }
 body .content .item-description table td {
   border: 1px solid #E2EAF2;
@@ -726,7 +734,7 @@ body .content .video iframe {
   flex-direction: column;
   border-width: 0 2px 0 2px;
   border-style: solid;
-  border-color: #394a6d;
+  border-color: #384661;
 }
 .select-wrapper .select__trigger {
   position: relative;
@@ -736,14 +744,14 @@ body .content .video iframe {
   padding: 0 22px;
   font-size: 20px;
   font-weight: 300;
-  color: #3b3b3b;
+  color: #384661;
   height: 60px;
   line-height: 60px;
   background: #ffffff;
   cursor: pointer;
   border-width: 2px 0 2px 0;
   border-style: solid;
-  border-color: #394a6d;
+  border-color: #384661;
 }
 .select-wrapper .arrow {
   position: relative;
