@@ -398,9 +398,8 @@ body .content .products .product-item__body .button-products {
 body .content .form {
   margin-top: 70px;
   margin-bottom: 70px;
-  border: 8px solid #101084;
   padding: 20px;
-  box-shadow: 3px 20px 20px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 3px -7px 20px 3px rgba(0, 0, 0, 0.12);
 }
 @media (max-width: 768px) {
   body .content .form {
