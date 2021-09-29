@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
   menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('open');
     document.querySelector('.mobile-menu').classList.toggle('open');
+    document.querySelector('.content.head').classList.toggle('open');
   });
 
   const toFormBtn = document.querySelector('#toFormBtn');
@@ -35,9 +36,12 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  document.querySelector('.select-wrapper').addEventListener('click', function() {
-    this.querySelector('.select').classList.toggle('open');
-  })
+  const selectWrapper = document.querySelector('.select-wrapper');
+  if(selectWrapper) {
+    selectWrapper.addEventListener('click', function() {
+      this.querySelector('.select').classList.toggle('open');
+    })
+  }
 
   document.querySelectorAll(".custom-option").forEach((option, index) => {
     option.addEventListener('click', function() {

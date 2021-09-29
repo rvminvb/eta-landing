@@ -31,6 +31,22 @@ body {
 body .container {
   background: linear-gradient(180deg, #313e4b, #649280);
 }
+body .mobile-number {
+  display: none;
+}
+@media (max-width: 768px) {
+  body .mobile-number {
+    display: block;
+    padding-right: 7vw;
+    padding-left: 7vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(347deg, #e0774c, #e2614d);
+    font-weight: 500;
+    color: #ffff;
+    text-align: center;
+  }
+}
 body .content {
   padding-right: 15vw;
   padding-left: 15vw;
@@ -53,6 +69,9 @@ body .content.head {
   body .content.head {
     box-shadow: -1px -20px 56px 0px rgba(0, 0, 0, 0.12);
   }
+}
+body .content.head.open {
+  backdrop-filter: none;
 }
 body .content .header {
   display: flex;
@@ -132,7 +151,7 @@ body .content .header .mobile-menu {
   align-items: center;
   font-size: 20px;
   line-height: 44px;
-  background-color: #e0d5cb;
+  background: linear-gradient(347deg, #e0774c, #e2614d);
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -140,14 +159,6 @@ body .content .header .mobile-menu {
 }
 body .content .header .mobile-menu.open {
   display: flex;
-}
-body .line {
-  border-bottom: 1px solid #7E868E;
-}
-@media (max-width: 768px) {
-  body .line {
-    display: none;
-  }
 }
 body .content .first-page {
   margin-top: 90px;
@@ -561,6 +572,13 @@ body .content .sucsess {
   padding: 20px;
   background: linear-gradient(347deg, #e0774c, #e2614d);
   color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+body .content .sucsess p {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
 }
 body .content .item-page {
   display: flex;
