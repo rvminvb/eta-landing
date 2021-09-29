@@ -162,7 +162,7 @@ body .content .first-page {
 @media (max-width: 768px) {
   body .content .first-page {
     flex-direction: column;
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 40px;
   }
 }
@@ -339,6 +339,7 @@ body .content .products {
 @media (max-width: 768px) {
   body .content .products {
     flex-direction: column;
+    margin-top: 80px;
   }
 }
 body .content .products .wrapper {
@@ -349,6 +350,12 @@ body .content .products .wrapper {
   top: -10%;
   background-color: #b95140ba;
   border-radius: 7px;
+}
+@media (max-width: 768px) {
+  body .content .products .wrapper {
+    top: -3%;
+    height: 103%;
+  }
 }
 body .content .products .product-item {
   box-shadow: 0 4px 56px rgba(0, 0, 0, 0.12);
