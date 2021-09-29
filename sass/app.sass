@@ -20,13 +20,14 @@ html
   height: -webkit-fill-available
   
 body
-  background-color: #fcfcfc
   font-family: 'Montserrat', sans-serif
   margin: 0
   min-height: 100vh
   min-height: -webkit-fill-available
   display: flex
   flex-direction: column
+  .container
+    background: linear-gradient(180deg, #313e4b, #649280)
   .content
     padding-right: 15vw
     padding-left: 15vw
@@ -37,6 +38,9 @@ body
       padding-left: 7vw
     &.head
       box-shadow: 0 4px 56px rgb(0 0 0 / 12%)
+      background-color: rgba(255, 255, 255, .15)
+      backdrop-filter: blur(5px)
+      color: #ffff
       @include media("<=tablet")
         box-shadow: -1px -20px 56px 0px rgb(0 0 0 / 12%)
     .header
@@ -50,9 +54,9 @@ body
       .logo
         display: flex
         margin-right: 10vw
-        background: center / contain no-repeat url('../assets/img/logo.png')
+        background: center / contain no-repeat url('../assets/img/logo_smal.png')
         max-width: 200px
-        height: 80px
+        height: 60px
         width: 100%
         z-index: 101
         @include media("<=tablet")
@@ -109,9 +113,11 @@ body
   .content
     .first-page
       margin-top: 90px
+      background-color: rgba(255, 255, 255, .15)
+      border-radius: 5px
+      backdrop-filter: blur(5px)
       display: flex
       justify-content: space-between
-      box-shadow: 0 4px 56px rgb(0 0 0 / 12%)
       padding: 30px 30px 0 30px
       margin-bottom: 70px
       @include media("<=tablet")
@@ -143,6 +149,7 @@ body
           font-weight: 700
           line-height: 60px
           margin-bottom: 24px
+          color: #ffff
           @include media("<=tablet")
             font-size: 40px
             margin-bottom: 20px
@@ -152,6 +159,7 @@ body
           font-size: 21px
           font-weight: 400
           line-height: 30px
+          color: #ffff
           @include media("<=tablet")
             font-size: 19px
             text-align: center
@@ -160,7 +168,7 @@ body
           max-width: 307px
           width: 100%
           height: 88px
-          background-color: #384661
+          background-color: #b95140ba
           border-radius: 8px
           display: flex
           align-items: center
@@ -195,9 +203,10 @@ body
         flex-direction: column
         position: relative
         max-width: 650px
+        color: #fcfcfc
         .page-number
-          color: #b69a82
-          opacity: .4
+          color: #ffffff
+          opacity: .3
           font-weight: 500
           font-size: 120px
           position: absolute
@@ -225,7 +234,6 @@ body
             margin-top: 20px
   .content
     &.items
-      background-color: #e0d5cb
       margin-top: 30px
       @include media("<=tablet")
       margin-top: 0
@@ -243,8 +251,18 @@ body
       display: flex
       flex-direction: row
       justify-content: space-around
+      position: relative
+      margin-top: 150px
       @include media("<=tablet")
         flex-direction: column
+      .wrapper
+        position: absolute
+        width: 120%
+        height: 70%
+        left: -10%
+        top: -10%
+        background-color: #b95140ba
+        border-radius: 7px
       .product-item
         box-shadow: 0 4px 56px rgb(0 0 0 / 12%)
         display: flex
@@ -252,6 +270,7 @@ body
         margin-bottom: 65px
         max-width: 500px
         flex: 1 1 50%
+        z-index: 1
         &:not(:last-child)
           margin-right: 50px
           @include media("<=tablet")
@@ -268,8 +287,8 @@ body
           flex-direction: column
           padding-left: 40px
           padding-right: 40px
-          color: #030303
-          background-color: #fcfcfc
+          color: #ffff
+          background-color: #313e4bd4
           @include media("<=tablet")
             padding-left: 15px
             padding-right: 15px
@@ -299,7 +318,7 @@ body
             text-decoration: none
             width: 189px
             height: 68px
-            background-color: #384661
+            background-color: #fcfcfc
             border-radius: 8px
             display: flex
             align-items: center
@@ -307,7 +326,7 @@ body
             margin-bottom: 25px
             font-weight: 500
             font-size: 18px
-            color: #fcfcfc
+            color: #000
             @include media("<=tablet")
               align-self: center
               margin-bottom: 15px
@@ -315,6 +334,7 @@ body
     &.feedback
       margin-top: 25px
     .form
+      background-color: #fcfcfcd1
       margin-top: 70px
       margin-bottom: 70px
       padding: 20px
@@ -373,7 +393,7 @@ body
             border-radius: 8px
         .form-button
           border-radius: 8px
-          background-color: #384661
+          background-color: #313e4b
           display: flex
           align-items: center
           justify-content: center
@@ -390,6 +410,8 @@ body
     .item-page
       display: flex
       margin-top: 90px
+      background-color: rgba(255, 255, 255, .15)
+      backdrop-filter: blur(5px)
       @include media("<=tablet")
         flex-direction: column-reverse
         margin-top: 0
