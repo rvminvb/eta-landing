@@ -601,6 +601,7 @@ body .content .item-page .right-content .heading {
   font-weight: 700;
   line-height: 60px;
   margin-bottom: 24px;
+  color: #fcfcfc;
 }
 @media (max-width: 768px) {
   body .content .item-page .right-content .heading {
@@ -614,6 +615,7 @@ body .content .item-page .right-content .subtitle {
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 30px;
+  color: #fcfcfc;
 }
 @media (max-width: 768px) {
   body .content .item-page .right-content .subtitle {
@@ -622,9 +624,9 @@ body .content .item-page .right-content .subtitle {
   }
 }
 body .content .item-page .right-content .list {
-  color: #e0d5cb;
+  color: #ead2cec4;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 32px;
   display: flex;
   margin-bottom: 40px;
 }
@@ -635,7 +637,7 @@ body .content .item-page .right-content .list .numbers p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #384661;
+  color: #fcfcfc;
   margin-top: 5px;
   padding-right: 50px;
 }
@@ -644,6 +646,8 @@ body .content .item-header {
   font-size: 36px;
   text-align: center;
   margin-bottom: 60px;
+  margin-top: 60px;
+  color: #fcfcfc;
 }
 @media (max-width: 768px) {
   body .content .item-header {
@@ -671,13 +675,14 @@ body .content .items .item-card {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  background-color: #fcfcfc;
 }
 body .content .items .item-card p {
   margin-top: 24px;
   text-align: center;
 }
 body .content .items .item-card.active {
-  border: 3px solid #384661;
+  border: 3px solid #b95140c4;
 }
 body .content .select-wrapper {
   display: none;
@@ -695,6 +700,7 @@ body .content .item-description {
   display: none;
   justify-content: center;
   text-align: justify;
+  color: #fcfcfc;
 }
 @media (max-width: 768px) {
   body .content .item-description {
