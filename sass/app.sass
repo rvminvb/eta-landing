@@ -27,7 +27,7 @@ body
   display: flex
   flex-direction: column
   .container
-    background: linear-gradient(180deg, #313e4b, #649280)
+    background: linear-gradient(to bottom, #283048, #859398)
   .mobile-number
     display: none
     @include media("<=tablet")
@@ -36,7 +36,7 @@ body
       padding-left: 7vw
       padding-top: 10px
       padding-bottom: 10px
-      background: linear-gradient(347deg, #e0774c, #e2614d) 
+      background: linear-gradient(301deg, #660411 0%, #660411 27%, #bd0720 27%, #e8122e 50%, #bd0720 50%, #e8122e 64%, #820515 64%, #820515 100%)
       font-weight: 500
       color: #ffff
       text-align: center
@@ -67,31 +67,37 @@ body
         padding-bottom: 20px
       .logo
         display: flex
-        margin-right: 10vw
-        background: center / contain no-repeat url('../assets/img/logo_smal.png')
+        margin-right: 6vw
+        flex-direction: column
         max-width: 200px
-        height: 60px
-        width: 100%
         z-index: 101
+        font-weight: 500
+        color: #fff
+        text-decoration: none
         @include media("<=tablet")
           margin-right: 0
           height: 60px
+        .image
+          background: center / contain no-repeat url('../assets/img/logo_smal.png')
+          height: 60px
+          width: 100%
+          margin-bottom: 10px
       .contacts
         display: flex
         align-items: center
         @include media("<=tablet")
           display: none
         .email
-          margin-right: 3.6vw
+          margin-right: 2.5vw
           img
-            margin-right: 12px
+            margin-right: 10px
         .location
-          margin-right: 3.6vw
+          margin-right: 2.5vw
           img
-            margin-right: 12px
+            margin-right: 10px
         .phone
           img
-            margin-right: 12px
+            margin-right: 10px
       .btn-menu
         display: none
         z-index: 101
@@ -113,7 +119,7 @@ body
         align-items: center
         font-size: 20px
         line-height: 44px
-        background: linear-gradient(347deg, #e0774c, #e2614d)
+        background: linear-gradient(301deg, #660411 0%, #660411 27%, #bd0720 27%, #e8122e 50%, #bd0720 50%, #e8122e 64%, #820515 64%, #820515 100%)
         width: 100vw
         height: 100vh
         z-index: 100
@@ -178,7 +184,7 @@ body
           max-width: 307px
           width: 100%
           height: 88px
-          background: linear-gradient(347deg, #e0774c, #e2614d)
+          background: #a50017de
           border-radius: 8px
           display: flex
           align-items: center
@@ -272,7 +278,7 @@ body
         height: 70%
         left: -10%
         top: -10%
-        background: linear-gradient(347deg, #e0774c, #e2614d)
+        background: linear-gradient(127deg, rgba(102,4,17,1) 0%, rgba(102,4,17,1) 27%, rgba(189,7,32,1) 27%, rgba(232,18,46,1) 50%, rgba(189,7,32,1) 50%, rgba(232,18,46,1) 64%, rgba(130,5,21,1) 64%, rgba(130,5,21,1) 100%)
         border-radius: 15px
         @include media("<=tablet")
           top: -3%
@@ -297,14 +303,14 @@ body
           height: 450px
           width: 100%
           background-color: #fcfcfc
-          border-radius: 6px
+          border-radius: 6px 6px 0 0 
         &__body
           display: flex
           flex-direction: column
           padding-left: 40px
           padding-right: 40px
           color: #ffff
-          background-color: #313e4bd4
+          background-color: #283048
           @include media("<=tablet")
             padding-left: 15px
             padding-right: 15px
@@ -409,7 +415,7 @@ body
             border-radius: 8px
         .form-button
           border-radius: 8px
-          background-color: #313e4b
+          background-color: #283048
           display: flex
           align-items: center
           justify-content: center
@@ -428,7 +434,7 @@ body
       margin-top: 70px
       margin-bottom: 70px
       padding: 20px
-      background: linear-gradient(347deg, #e0774c, #e2614d)
+      background: linear-gradient(127deg, #660411 0%, #660411 27%, #bd0720 27%, #e8122e 50%, #bd0720 50%, #e8122e 64%, #820515 64%, #820515 100%)
       color: white 
       text-align: center
       border-radius: 10px
@@ -546,7 +552,7 @@ body
           text-align: center
           color: #fff
         &.active
-          background: linear-gradient(347deg, #e0774c, #e2614d)
+          background: #a50017de
     .select-wrapper
       display: none
       @include media("<=tablet")
@@ -626,7 +632,7 @@ body
     flex-direction: column
     border-width: 0 2px 0 2px
     border-style: solid
-    border-color: #e2614d
+    border-color: #a50017de
 
   .select__trigger 
     position: relative
@@ -636,14 +642,13 @@ body
     padding: 0 22px
     font-size: 20px
     font-weight: 300
-    color: #e2614d
     height: 60px
     line-height: 60px
     background: #ffffff
     cursor: pointer
     border-width: 2px 0 2px 0
     border-style: solid
-    border-color: #e2614d
+    border-color: #a50017de
 
   .arrow
     position: relative
@@ -661,12 +666,12 @@ body
   .arrow::before 
     left: -5px
     transform: rotate(-45deg)
-    background-color: #e2614d
+    background-color: #a50017de
 
   .arrow::after 
     left: 5px
     transform: rotate(45deg)
-    background-color: #e2614d
+    background-color: #a50017de
 
   .open .arrow::before 
     left: -5px
@@ -683,7 +688,7 @@ body
     top: 100%
     left: 0
     right: 0
-    border: 2px solid #e2614d
+    border: 2px solid #a50017de
     border-top: 0
     background: #fff
     transition: all 0.5s
@@ -714,4 +719,4 @@ body
 
   .custom-option.selected 
     color: #ffffff
-    background-color: #e2614d
+    background-color: #a50017de
